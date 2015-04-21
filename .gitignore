@@ -1,0 +1,14 @@
+# Temp. files
+*~
+
+# KiCAD temp files
+*.bak
+*.bck
+*.000
+*.net
+*.dcm
+*-cache.lib
+*.kicad_pcb-bak
+
+# EAGLE temp files
+*.l#*
