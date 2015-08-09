@@ -12,4 +12,4 @@ Credits
 -------
 
 - ```LivingHingeBox_3mmMDF.dxf``` was originally designed by Paul Nixon.
-- SomoBot designs originally from [here](https://github.com/makenai/sumobot-jr)
+- Sumo Bot designs originally from [here](https://github.com/makenai/sumobot-jr)
