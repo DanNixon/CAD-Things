@@ -1,5 +1,5 @@
 include <CAD-Library/rounded_rect.scad>
-include <CAD-Library/BubbleScopeMount.scad>
+include <CAD-Library/bubble_scope_mount.scad>
 
 module chipOpening() {
 	clearance = 0.5;
