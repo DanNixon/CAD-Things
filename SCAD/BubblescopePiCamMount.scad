@@ -1,5 +1,4 @@
-include <CAD-Library/rounded_rect.scad>
-include <CAD-Library/bubble_scope_mount.scad>
+include <Suwako/BubblescopeMount.scad>
 
 module chipOpening() {
 	clearance = 0.5;
@@ -60,7 +59,7 @@ rotate([0, 180, 0])
 			piCameraAdapter();
 			rotate([0, 180, 0])
 				translate([0, 0, 4])
-					bubblescope_mount(threads=true);
+					BubblescopeMount(threads=true);
 		}
 		mountingHoles();
 	}
