@@ -1,4 +1,4 @@
-include <CAD-Library/rounded_rect.scad>
+include <Suwako/Shapes.scad>
 
 module cableOpening() {
 	translate([0,14,3])
@@ -44,7 +44,8 @@ module mountingHoles()
 module piCameraAdapter() {
 	difference() {
 		difference() {
-			RoundedRect(40, 40, 10, 5, centre=true);
+            linear_extrude(10, center=true)
+                RoundedRectangle([40, 40], 5, center=true);
 			boardOpening();
 			lensOpening();
 			cableOpening();
