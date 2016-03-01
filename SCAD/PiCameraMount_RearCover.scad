@@ -1,4 +1,4 @@
-include <CAD-Library/rounded_rect.scad>
+include <Suwako/Shapes.scad>
 
 module mountingHoles()
 {
@@ -18,7 +18,8 @@ module mountingHoles()
 module piCameraAdapterRear() {
 	difference() {
 		difference() {
-			RoundedRect(40, 40, 3, 5, centre=true);
+            linear_extrude(3, center=true)
+                RoundedRectangle([40, 40], 5, center=true);
 			translate([0, 0, -10.1])
 				mountingHoles();
 		}
