@@ -75,9 +75,6 @@ module FrontPanel()
         x = -1 + 2 * (i % 2);
         y = -1 + 2 * ((i - (i % 2)) / 2); // No integer division in OpenSCAD
 
-        echo(x);
-        echo(y);
-
         translate([x * offset, y * offset])
           Label(names[i], offset=[x * 15, 0])
             circle(d=pot_diam);
