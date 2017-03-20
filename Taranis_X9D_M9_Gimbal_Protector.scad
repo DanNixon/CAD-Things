@@ -3,12 +3,13 @@ EPSILON = 0.001;
 
 STICK_HEIGHT = 32;
 STICK_DIAM = 10;
-STICK_GUARD_DIAM = 15;
+STICK_GUARD_DIAM = 16;
 GIMBAL_DIAM = 46;
 CENTER_SQUARE_DIMS = [9, 9, 4];
 
 SMALL_ROUNDING_DIAM = 2;
 LARGE_ROUNDING_DIAM = 3;
+
 
 module Cap(d)
 {
@@ -19,34 +20,51 @@ module Cap(d)
   }
 }
 
-difference()
+module Cutout(h, d1, d2, d3)
 {
-  union()
+  difference()
   {
-    minkowski()
+    intersection()
     {
-      cylinder(d=GIMBAL_DIAM-LARGE_ROUNDING_DIAM, h=5-LARGE_ROUNDING_DIAM);
+      cylinder(h=h, d=d2);
 
-      Cap(d=LARGE_ROUNDING_DIAM, $fn=8);
+      translate([d1 / 2, d1 / 2, 0])
+        cube([d2, d2, h]);
     }
 
-    minkowski()
+    cylinder(h=h, d=d3);
+  }
+}
+
+
+//minkowski()
+{
+  difference()
+  {
+    hull()
     {
-      difference()
+      cylinder(h=5, d=GIMBAL_DIAM);
+
+      translate([0, 0, STICK_HEIGHT-5])
+        cylinder(h=5, d=STICK_GUARD_DIAM);
+    }
+
+    union()
+    {
+      cylinder(h=STICK_HEIGHT, d=STICK_DIAM);
+
+      for(a=[0, 90, 180, 270])
       {
-        cylinder(d=STICK_GUARD_DIAM-SMALL_ROUNDING_DIAM, h=STICK_HEIGHT-SMALL_ROUNDING_DIAM);
-        cylinder(d=STICK_DIAM+SMALL_ROUNDING_DIAM, h=STICK_HEIGHT-SMALL_ROUNDING_DIAM+EPSILON);
-      }
+        rotate([0, 0, a])
+        {
+          Cutout(100, 5, GIMBAL_DIAM * 0.8, STICK_GUARD_DIAM);
 
-      Cap(d=SMALL_ROUNDING_DIAM, $fn=8);
+          translate([0, 0, 5])
+            Cutout(100, 5, GIMBAL_DIAM, STICK_GUARD_DIAM);
+        }
+      }
     }
   }
 
-  union()
-  {
-    cylinder(d=STICK_DIAM, h=STICK_HEIGHT);
-
-    translate([0, 0, CENTER_SQUARE_DIMS[2] / 2])
-      cube(CENTER_SQUARE_DIMS + [0, 0, EPSILON], center=true);
-  }
+  //Cap(LARGE_ROUNDING_DIAM);
 }
