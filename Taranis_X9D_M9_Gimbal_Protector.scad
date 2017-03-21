@@ -1,14 +1,14 @@
 $fn = 32;
 EPSILON = 0.001;
 
+LARGE_ROUNDING_DIAM = 3;
+BOTTOM_SECTION_HEIGHT = 5;
+SUPPORT_WIDTH = 5;
 STICK_HEIGHT = 32;
 STICK_DIAM = 10;
 STICK_GUARD_DIAM = 16;
 GIMBAL_DIAM = 46;
 CENTER_SQUARE_DIMS = [9, 9, 4];
-
-SMALL_ROUNDING_DIAM = 2;
-LARGE_ROUNDING_DIAM = 3;
 
 
 module Cap(d)
@@ -37,16 +37,16 @@ module Cutout(h, d1, d2, d3)
 }
 
 
-//minkowski()
+minkowski()
 {
   difference()
   {
     hull()
     {
-      cylinder(h=5, d=GIMBAL_DIAM);
+      cylinder(h=BOTTOM_SECTION_HEIGHT, d=GIMBAL_DIAM - LARGE_ROUNDING_DIAM);
 
-      translate([0, 0, STICK_HEIGHT-5])
-        cylinder(h=5, d=STICK_GUARD_DIAM);
+      translate([0, 0, STICK_HEIGHT - 5 - (LARGE_ROUNDING_DIAM / 2)])
+        cylinder(h=BOTTOM_SECTION_HEIGHT, d=STICK_GUARD_DIAM);
     }
 
     union()
@@ -57,14 +57,23 @@ module Cutout(h, d1, d2, d3)
       {
         rotate([0, 0, a])
         {
-          Cutout(100, 5, GIMBAL_DIAM * 0.8, STICK_GUARD_DIAM);
+          Cutout(100, SUPPORT_WIDTH - LARGE_ROUNDING_DIAM, GIMBAL_DIAM * 0.8, STICK_GUARD_DIAM);
 
-          translate([0, 0, 5])
-            Cutout(100, 5, GIMBAL_DIAM, STICK_GUARD_DIAM);
+          translate([0, 0, BOTTOM_SECTION_HEIGHT])
+            Cutout(100, SUPPORT_WIDTH - LARGE_ROUNDING_DIAM, GIMBAL_DIAM, STICK_GUARD_DIAM);
         }
       }
     }
   }
 
-  //Cap(LARGE_ROUNDING_DIAM);
+  Cap(LARGE_ROUNDING_DIAM);
+}
+
+
+// Markers
+color("cyan", alpha=0.5)
+{
+  cylinder(d=2, h=STICK_HEIGHT);
+  translate([0, 0, -2])
+    cylinder(d=GIMBAL_DIAM, h=1);
 }
