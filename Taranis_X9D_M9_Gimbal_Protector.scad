@@ -51,16 +51,16 @@ minkowski()
 
     union()
     {
-      cylinder(h=STICK_HEIGHT, d=STICK_DIAM);
+      cylinder(h=STICK_HEIGHT, d=STICK_DIAM + (LARGE_ROUNDING_DIAM / 2));
 
       for(a=[0, 90, 180, 270])
       {
         rotate([0, 0, a])
         {
-          Cutout(100, SUPPORT_WIDTH - LARGE_ROUNDING_DIAM, GIMBAL_DIAM * 0.8, STICK_GUARD_DIAM);
+          Cutout(100, SUPPORT_WIDTH - (LARGE_ROUNDING_DIAM / 2), GIMBAL_DIAM * 0.8, STICK_GUARD_DIAM);
 
           translate([0, 0, BOTTOM_SECTION_HEIGHT])
-            Cutout(100, SUPPORT_WIDTH - LARGE_ROUNDING_DIAM, GIMBAL_DIAM, STICK_GUARD_DIAM);
+            Cutout(100, SUPPORT_WIDTH - (LARGE_ROUNDING_DIAM / 2), GIMBAL_DIAM, STICK_GUARD_DIAM - (LARGE_ROUNDING_DIAM / 2));
         }
       }
     }
@@ -73,7 +73,7 @@ minkowski()
 // Markers
 color("cyan", alpha=0.5)
 {
-  cylinder(d=2, h=STICK_HEIGHT);
+  cylinder(d=STICK_DIAM * 0.9, h=STICK_HEIGHT);
   translate([0, 0, -2])
     cylinder(d=GIMBAL_DIAM, h=1);
 }
