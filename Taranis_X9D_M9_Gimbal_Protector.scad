@@ -1,12 +1,13 @@
 $fn = 32;
 EPSILON = 0.001;
 
-LARGE_ROUNDING_DIAM = 3;
-BOTTOM_SECTION_HEIGHT = 5;
-SUPPORT_WIDTH = 4;
+LARGE_ROUNDING_DIAM = 2;
+BOTTOM_SECTION_HEIGHT = 4;
+SUPPORT_WIDTH = 2.5;
 STICK_HEIGHT = 32;
 STICK_DIAM = 10;
-STICK_GUARD_DIAM = 18;
+STICK_GUARD_DIAM = 15;
+OUTER_RING_WIDTH = 6;
 GIMBAL_DIAM = 46;
 CENTER_SQUARE_DIMS = [10, 10, 5];
 
@@ -45,7 +46,7 @@ difference()
     {
       hull()
       {
-        cylinder(h=BOTTOM_SECTION_HEIGHT, d=GIMBAL_DIAM - LARGE_ROUNDING_DIAM);
+        cylinder(h=BOTTOM_SECTION_HEIGHT - (LARGE_ROUNDING_DIAM / 2), d=GIMBAL_DIAM - LARGE_ROUNDING_DIAM);
 
         translate([0, 0, STICK_HEIGHT - 5 - (LARGE_ROUNDING_DIAM / 2)])
           cylinder(h=BOTTOM_SECTION_HEIGHT, d=STICK_GUARD_DIAM - LARGE_ROUNDING_DIAM);
@@ -59,7 +60,7 @@ difference()
         {
           rotate([0, 0, a])
           {
-            Cutout(100, SUPPORT_WIDTH - (LARGE_ROUNDING_DIAM / 2), GIMBAL_DIAM * 0.8, STICK_GUARD_DIAM - (LARGE_ROUNDING_DIAM / 2));
+            Cutout(100, SUPPORT_WIDTH - (LARGE_ROUNDING_DIAM / 2), GIMBAL_DIAM - OUTER_RING_WIDTH, STICK_GUARD_DIAM - (LARGE_ROUNDING_DIAM / 2));
 
             translate([0, 0, BOTTOM_SECTION_HEIGHT])
               Cutout(100, SUPPORT_WIDTH - (LARGE_ROUNDING_DIAM / 2), GIMBAL_DIAM, STICK_GUARD_DIAM - (LARGE_ROUNDING_DIAM / 2));
@@ -72,7 +73,8 @@ difference()
   }
 
   translate([0, 0, CENTER_SQUARE_DIMS[2] / 2])
-    cube(CENTER_SQUARE_DIMS, center=true);
+    rotate([0, 0, 45])
+      cube(CENTER_SQUARE_DIMS, center=true);
 }
 
 
