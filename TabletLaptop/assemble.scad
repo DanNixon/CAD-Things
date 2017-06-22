@@ -20,9 +20,9 @@ module ExtrudeAndColour(c)
       children();
 }
 
-translate([0, -50, 0])
+translate([0, -100, 0])
   Keyboard();
 
 rotate([angle, 0, 0])
-  translate([0, 50, 0])
+  translate([0, 100, 0])
     Tablet();
