@@ -1,5 +1,6 @@
 include <../config.scad>
 include <../common/macros.scad>
+use <../common/external_parts.scad>
 use <../common/ScrewFixing.scad>
 
 module TabletLayer0()
@@ -22,6 +23,9 @@ module TabletLayer0()
       for(y = tablet_screw_y_positions_a())
         translate([x, y])
           ScrewFixing(x);
+
+    TabletCameraCutout();
+    TabletButtonsCutout();
   }
 }
 

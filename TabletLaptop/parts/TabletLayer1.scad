@@ -6,7 +6,11 @@ module TabletLayer1()
   difference()
   {
     square(tablet_outer_dims(), center=true);
+
     square(tablet_middle_inner_dims(), center=true);
+
+    translate([0, tablet_middle_inner_dims()[1] / 2])
+      square(tablet_middle_inner_dims(), center=true);
   }
 
   /* Tabs */

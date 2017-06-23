@@ -12,6 +12,30 @@ module Tablet()
           square(TABLET_SCREEN_DIMENSIONS, center=true);
 }
 
+module TabletCameraCutout()
+{
+  translate(TABLET_REAR_CAMERA_CUTOUT_POS)
+  {
+    minkowski()
+    {
+      square(TABLET_REAR_CAMERA_CUTOUT_DIMS - [5, 5], center=true);
+      circle(r=5, $fn=16);
+    }
+  }
+}
+
+module TabletButtonsCutout()
+{
+  translate([-35, 100])
+  {
+    minkowski()
+    {
+      square([130, 10], center=true);
+      circle(r=5, $fn=16);
+    }
+  }
+}
+
 module Keyboard()
 {
   color("dimgrey")
