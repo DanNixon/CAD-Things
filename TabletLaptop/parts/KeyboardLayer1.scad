@@ -9,7 +9,10 @@ module KeyboardLayer1()
     square(keyboard_middle_inner_dims(), center=true);
   }
 
-  // TODO
+  for(x = keyboard_tab_x_positions())
+    for(y = keyboard_tab_y_positions_b())
+      translate([x, y])
+        square([MATERIAL_THICKNESS, TAB_WIDTH], center=true);
 }
 
 KeyboardLayer1();

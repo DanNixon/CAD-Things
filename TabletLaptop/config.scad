@@ -2,6 +2,9 @@
 MATERIAL_THICKNESS = 3;
 MACHINE_TOLERANCE = 0.1;
 
+/* Fixings */
+TAB_WIDTH = 10;
+
 /* Tablet */
 TABLET_DIMENSIONS = [263, 180, 6];
 
