@@ -9,7 +9,8 @@ module KeyboardLayer1()
     square(keyboard_middle_inner_dims(), center=true);
   }
 
-  for(x = keyboard_tab_x_positions())
+  /* Tabs */
+  for(x = keyboard_assy_x_positions())
     for(y = keyboard_tab_y_positions_b())
       translate([x, y])
         square([MATERIAL_THICKNESS, TAB_WIDTH], center=true);

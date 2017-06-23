@@ -12,7 +12,7 @@ use <parts/TabletLayer1.scad>
 use <parts/TabletLayer2.scad>
 use <parts/TabletSide.scad>
 
-angle = 60;
+angle = 120;
 
 module ExtrudeAndColour(c)
 {
@@ -21,9 +21,7 @@ module ExtrudeAndColour(c)
       children();
 }
 
-keyboard_y = (keyboard_outer_dims()[1] / 2) + hinge_radius();
-
-translate([0, -keyboard_y, 0])
+translate([0, -keyboard_y_assy_offset(), 0])
 {
   Keyboard();
 
@@ -47,9 +45,9 @@ translate([0, -keyboard_y, 0])
           KeyboardSide();
 }
 
-rotate([angle, 0, 0])
+rotate([180 - angle, 0, 0])
 {
-  translate([0, 110, 0])
+  translate([0, tablet_y_assy_offset(), -tablet_z_assy_offset()])
   {
     Tablet();
 
