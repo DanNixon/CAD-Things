@@ -21,20 +21,20 @@ module ExtrudeAndColour(c)
       children();
 }
 
-translate([0, -110, 0])
+keyboard_y = (keyboard_outer_dims()[1] / 2) + hinge_radius();
+
+translate([0, -keyboard_y, 0])
 {
   Keyboard();
 
-  z_offset = (KEYBOARD_DIMENSIONS[2] + KEYBOARD_PADDING[2] + MATERIAL_THICKNESS) / 2;
-
-  translate([0, 0, -z_offset])
+  translate([0, 0, -keyboard_z_offset()])
     ExtrudeAndColour("red")
       KeyboardLayer0();
 
   ExtrudeAndColour("blue")
     KeyboardLayer1();
 
-  translate([0, 0, z_offset])
+  translate([0, 0, keyboard_z_offset()])
     ExtrudeAndColour("red")
       KeyboardLayer2();
 
@@ -53,17 +53,23 @@ rotate([angle, 0, 0])
   {
     Tablet();
 
-    z_offset = (TABLET_DIMENSIONS[2] + TABLET_PADDING[2] + MATERIAL_THICKNESS) / 2;
-
-    translate([0, 0, -z_offset])
+    translate([0, 0, -tablet_z_offset()])
       ExtrudeAndColour("red")
         TabletLayer0();
 
     ExtrudeAndColour("blue")
       TabletLayer1();
 
-    translate([0, 0, z_offset])
+    translate([0, 0, tablet_z_offset()])
       ExtrudeAndColour("red")
         TabletLayer2();
+
+    x_offset = (tablet_outer_dims()[0] + MATERIAL_THICKNESS) / 2;
+
+    for(x=[-x_offset, x_offset])
+      translate([x, 0, 0])
+        rotate([0, 90, 0])
+          ExtrudeAndColour("green")
+            TabletSide();
   }
 }
