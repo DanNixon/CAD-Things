@@ -12,7 +12,7 @@ use <parts/TabletLayer1.scad>
 use <parts/TabletLayer2.scad>
 use <parts/TabletSide.scad>
 
-angle = 120;
+angle = 110;
 
 module ExtrudeAndColour(c)
 {

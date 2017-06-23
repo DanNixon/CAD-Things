@@ -41,5 +41,5 @@ function tablet_tab_y_positions_b() = [-tablet_tab_dy_b(), tablet_tab_dy_b()];
 function hinge_radius() = max(keyboard_side_radius(), tablet_side_radius());
 
 function keyboard_y_assy_offset() = (keyboard_outer_dims()[1] / 2) + hinge_radius();
-function tablet_y_assy_offset() = (tablet_outer_dims()[1] / 2) + hinge_radius() + 5;
+function tablet_y_assy_offset() = (tablet_outer_dims()[1] / 2) + hinge_radius();
 function tablet_z_assy_offset() = hinge_radius() * 2;
