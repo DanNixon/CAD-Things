@@ -1,3 +1,5 @@
+$fn = 16;
+
 internal = [85, 128, 22];
 material_thickness = 3;
 outer_padding = 3;

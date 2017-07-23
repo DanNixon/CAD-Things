@@ -1,4 +1,5 @@
 use <SCAD_Lib/BoltAndTabBox.scad>
+use <SCAD_Lib/parts/PineA64.scad>
 include <../config.scad>
 
 module BottomPanel()
@@ -7,11 +8,9 @@ module BottomPanel()
   {
     XYPanel2D(box_config);
 
-    screw_centres = [70, 118] / 2;
-    for(x = [-screw_centres[0], screw_centres[0]])
-      for(y = [-screw_centres[1], screw_centres[1]])
-        translate([x, y])
-          circle(d = 3.2);
+    rotate([0, 0, 90])
+      PineA64PlaceMountingHoles()
+        circle(d = 3.2);
   }
 }
 
