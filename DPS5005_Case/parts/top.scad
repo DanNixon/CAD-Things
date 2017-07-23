@@ -1,4 +1,4 @@
-use <Suwako/BoltAndTabBox.scad>
+use <SCAD_Lib/BoltAndTabBox.scad>
 use <../modules/Terminals.scad>
 include <../config.scad>
 

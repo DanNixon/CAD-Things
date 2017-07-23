@@ -1,5 +1,5 @@
 include <config.scad>
-use <Suwako/PanelNutFixing.scad>
+use <SCAD_Lib/PanelNutFixing.scad>
 
 module SideTabs(yMax)
 {

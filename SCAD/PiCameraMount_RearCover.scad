@@ -1,4 +1,4 @@
-include <Suwako/Shapes.scad>
+include <SCAD_Lib/Shapes.scad>
 
 module mountingHoles()
 {

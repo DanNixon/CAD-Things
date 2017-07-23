@@ -1,6 +1,6 @@
-use <Suwako/BoltAndTabBox.scad>
-use <Suwako/Label.scad>
-use <Suwako/parts/RapidDPDTSwitch.scad>
+use <SCAD_Lib/BoltAndTabBox.scad>
+use <SCAD_Lib/Label.scad>
+use <SCAD_Lib/parts/RapidDPDTSwitch.scad>
 include <../config.scad>
 
 label_offset = [0, -14];

@@ -1,4 +1,4 @@
-include <Suwako/BubblescopeMount.scad>
+include <SCAD_Lib/BubblescopeMount.scad>
 
 module chipOpening() {
 	clearance = 0.5;

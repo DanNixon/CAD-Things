@@ -1,4 +1,4 @@
-use <Suwako/Label.scad>
+use <SCAD_Lib/Label.scad>
 
 module Terminals(name)
 {
