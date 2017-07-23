@@ -4,8 +4,6 @@ use <parts/front.scad>
 use <parts/rear.scad>
 use <parts/top.scad>
 use <parts/bottom.scad>
-use <parts/left.scad>
-use <parts/right.scad>
 
 $fn = 16;
 
@@ -44,15 +42,4 @@ rotate([0, 0, 90])
   translate([0, 0, -z])
     ExtrudeAndColour("red")
       BottomPanel();
-
-  rotate([90, 0, 0])
-  {
-    translate([0, 0, y])
-      ExtrudeAndColour("green")
-        RightPanel();
-
-    translate([0, 0, -y])
-      ExtrudeAndColour("green")
-        LeftPanel();
-  }
 }
