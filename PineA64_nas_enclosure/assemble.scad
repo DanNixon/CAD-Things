@@ -7,6 +7,7 @@ use <common/HDD.scad>
 use <parts/BlankPanel.scad>
 use <parts/HDDPanel.scad>
 use <parts/Pine64Panel.scad>
+use <parts/Washers.scad>
 
 $fn = 16;
 
@@ -35,3 +36,7 @@ translate([0, 0, 20])
 translate([0, 0, 30])
   ExtrudeAndColour("blue")
     BlankPanel();
+
+translate([0, -100, 0])
+  ExtrudeAndColour("pink")
+    Washers();
