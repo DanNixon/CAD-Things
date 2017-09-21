@@ -1,5 +1,6 @@
 /* Material */
 MATERIAL_THICKNESS = 3;
+INNER_MATERIAL_THICKNESS = 6;
 MACHINE_TOLERANCE = 0.1;
 
 /* Fixings */

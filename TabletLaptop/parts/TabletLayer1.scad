@@ -17,7 +17,7 @@ module TabletLayer1()
   for(x = tablet_assy_x_positions())
     for(y = tablet_tab_y_positions_b())
       translate([x, y])
-        square([MATERIAL_THICKNESS, TAB_WIDTH], center=true);
+        square([INNER_MATERIAL_THICKNESS, TAB_WIDTH], center=true);
 }
 
 TabletLayer1();

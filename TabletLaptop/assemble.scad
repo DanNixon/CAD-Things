@@ -14,10 +14,10 @@ use <parts/TabletSide.scad>
 
 angle = 110;
 
-module ExtrudeAndColour(c)
+module ExtrudeAndColour(c, h=MATERIAL_THICKNESS)
 {
   color(c)
-    linear_extrude(height=MATERIAL_THICKNESS, center=true)
+    linear_extrude(height=h, center=true)
       children();
 }
 
@@ -55,7 +55,7 @@ rotate([180 - angle, 0, 0])
       ExtrudeAndColour("red")
         TabletLayer0();
 
-    ExtrudeAndColour("blue")
+    ExtrudeAndColour("blue", INNER_MATERIAL_THICKNESS)
       TabletLayer1();
 
     translate([0, 0, tablet_z_offset()])
