@@ -4,10 +4,6 @@ Things
 A variety of things I have created, some are fairly generic and could be used
 easily, others are a bit more purpose built.
 
-This was originally on my main CAD repository
-[here](https://github.com/DanNixon/CAD) which is now just for library parts,
-which are required for some designs here.
-
 Credits
 -------
 
