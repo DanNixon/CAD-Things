@@ -1,15 +1,15 @@
-internal = [50, 400, 260];
+internal = [50, 375, 240];
 material_thickness = 3;
 outer_padding = 5;
 
 screw_radius = 1.75;
-xy_screws = [0];
-xz_screws = [0];
+xy_screws = [-160, -60, 60, 160];
+xz_screws = [-100, -40, 40, 100];
 
 xy_tab_width = 20;
-xy_tabs = [-30, 30];
-xz_tab_width = 10;
-xz_tabs = [-15, 15];
+xy_tabs = [-120, 0, 120];
+xz_tab_width = 15;
+xz_tabs = [-75, 0, 75];
 
 box_config = [
     internal,
