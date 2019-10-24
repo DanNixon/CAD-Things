@@ -12,11 +12,11 @@ module Spacer(fridge, space)
 }
 
 
-fridge_1 = [40, 40, 60];
+fridge_1 = [35, 40, 60];
 fridge_2 = [20, 40, 60];
 
 
-Spacer(fridge_1, [5, 50, -1]);
+Spacer(fridge_1, [10, 50, -1]);
 
 mirror([1, 0, 0])
 {
