@@ -3,7 +3,16 @@ include <../config.scad>
 
 module TopPanel()
 {
-  XYPanel2D(box_config);
+  difference()
+  {
+    XYPanel2D(box_config);
+
+    /* Power switch cutout */
+    translate([10, -140])
+    {
+      square([15, 15], center=true);
+    }
+  }
 }
 
 TopPanel();
