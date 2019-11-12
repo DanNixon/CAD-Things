@@ -10,7 +10,8 @@ module TopPanel()
     /* Power switch cutout */
     translate([10, -140])
     {
-      square([15, 15], center=true);
+      /* Cutout for Cherry MX switch */
+      square([16, 14], center=true);
     }
   }
 }
