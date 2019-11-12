@@ -1,4 +1,4 @@
-include <config.scad>;
+include <config.scad>
 
 use <parts/front.scad>
 use <parts/rear.scad>
@@ -6,6 +6,8 @@ use <parts/top.scad>
 use <parts/bottom.scad>
 use <parts/left.scad>
 use <parts/right.scad>
+
+use <modules/motherboard.scad>
 
 $fn = 16;
 
@@ -55,4 +57,16 @@ rotate([0, 0, 90])
       ExtrudeAndColour("green")
         LeftPanel();
   }
+}
+
+translate([-50, 0, 0])
+{
+rotate([90, 0, 0])
+{
+difference()
+{
+  square([285, 210], center=true);
+  MotherboardDifference();
+}
+}
 }
