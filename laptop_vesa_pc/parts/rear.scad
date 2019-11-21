@@ -12,6 +12,22 @@ module VesaD()
   }
 }
 
+module PowerJackCutout()
+{
+  for (x = [-12.5, 12.5])
+  {
+    translate([x, 0, 0])
+    {
+      circle(d=3.5);
+    }
+  }
+
+  translate([0, -4])
+  {
+    square([16, 10], center=true);
+  }
+}
+
 module RearPanel()
 {
   difference()
@@ -19,6 +35,14 @@ module RearPanel()
     YZPanel2D(box_config);
 
     VesaD();
+
+    translate([110, 90])
+    {
+      rotate([0, 0, 90])
+      {
+        PowerJackCutout();
+      }
+    }
   }
 }
 
