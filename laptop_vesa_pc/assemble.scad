@@ -22,51 +22,79 @@ z = (internal[2] / 2) + half_thick + explode;
 module ExtrudeAndColour(c)
 {
   color(c)
+  {
     linear_extrude(height=material_thickness, center=true)
+    {
       children();
+    }
+  }
 }
 
 rotate([90, 0, 0])
 {
   translate([0, 0, x])
+  {
     ExtrudeAndColour("blue")
-      FrontPanel();
+    {
+      FrontPanel(panel=true);
+    }
+  }
 
   translate([0, 0, -x])
+  {
     ExtrudeAndColour("blue")
+    {
       RearPanel();
+    }
+  }
 }
 
 rotate([0, 0, 90])
 {
   translate([0, 0, z])
+  {
     ExtrudeAndColour("red")
+    {
       TopPanel();
+    }
+  }
 
   translate([0, 0, -z])
+  {
     ExtrudeAndColour("red")
+    {
       BottomPanel();
+    }
+  }
 
   rotate([90, 0, 0])
   {
     translate([0, 0, y])
+    {
       ExtrudeAndColour("green")
+      {
         RightPanel();
+      }
+    }
 
     translate([0, 0, -y])
+    {
       ExtrudeAndColour("green")
+      {
         LeftPanel();
+      }
+    }
   }
 }
 
-translate([-50, 0, 0])
+translate(motherboard_pos)
 {
-rotate([90, 0, 0])
-{
-difference()
-{
-  square([285, 210], center=true);
-  MotherboardDifference();
-}
-}
+  rotate([90, 0, 0])
+  {
+    difference()
+    {
+      square([285, 210], center=true);
+      MotherboardDifference();
+    }
+  }
 }

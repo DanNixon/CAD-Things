@@ -18,3 +18,5 @@ box_config = [
     [screw_radius, xy_screws, xz_screws],
     [[xy_tab_width, xy_tabs], [xz_tab_width, xz_tabs]]
   ];
+
+motherboard_pos = [-50, 0, 0];

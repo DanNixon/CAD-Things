@@ -1,6 +1,8 @@
 use <SCAD_Lib/BoltAndTabBox.scad>
 use <SCAD_Lib/Utils.scad>
 
+use <../modules/motherboard.scad>
+
 include <../config.scad>
 
 module VesaD()
@@ -42,6 +44,11 @@ module RearPanel()
       {
         PowerJackCutout();
       }
+    }
+
+    translate(motherboard_pos)
+    {
+      MotherboardDifference();
     }
   }
 }

@@ -1,5 +1,3 @@
-/* TODO: test hole positions */
-
 module MotherboardDifference()
 {
   holes = [

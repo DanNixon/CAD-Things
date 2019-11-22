@@ -2,7 +2,7 @@ use <SCAD_Lib/BoltAndTabBox.scad>
 use <../modules/display.scad>
 include <../config.scad>
 
-module FrontPanel()
+module FrontPanel(panel)
 {
   difference()
   {
@@ -10,9 +10,9 @@ module FrontPanel()
 
     translate([0, 6])
     {
-      Display(panel=true);
+      Display(panel=panel);
     }
   }
 }
 
-FrontPanel();
+FrontPanel(panel=false);
