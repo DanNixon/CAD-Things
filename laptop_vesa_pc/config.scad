@@ -1,4 +1,4 @@
-internal = [50, 375, 240];
+internal = [55, 375, 240];
 material_thickness = 3;
 outer_padding = 5;
 

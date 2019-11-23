@@ -10,7 +10,11 @@ module VesaD()
   /* VESA D: 100x100 centres, M4 thread */
   PlaceSquareMountingHoles([100, 100])
   {
-    circle(d=4.5);
+    /* Clearance */
+    /* circle(d=4.5); */
+
+    /* For tapping */
+    circle(d=3.5);
   }
 }
 

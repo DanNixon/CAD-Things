@@ -8,7 +8,7 @@ module TopPanel()
     XYPanel2D(box_config);
 
     /* Power switch cutout */
-    translate([10, -140])
+    translate([0, -140])
     {
       /* Cutout for Cherry MX switch */
       square([16, 14], center=true);
