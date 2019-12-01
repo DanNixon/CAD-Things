@@ -6,6 +6,7 @@ use <parts/top.scad>
 use <parts/bottom.scad>
 use <parts/left.scad>
 use <parts/right.scad>
+use <parts/power_jack_mount.scad>
 
 use <modules/motherboard.scad>
 
@@ -96,5 +97,13 @@ translate(motherboard_pos)
       square([285, 210], center=true);
       MotherboardDifference();
     }
+  }
+}
+
+translate([110, 40, 90])
+{
+  rotate([-90, 90, 0])
+  {
+    PowerJack();
   }
 }
