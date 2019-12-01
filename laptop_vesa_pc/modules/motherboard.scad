@@ -14,7 +14,7 @@ module MotherboardDifference()
   {
     translate([dx, -100] + h)
     {
-      circle(d=4.2);
+      circle(d=4.2, $fn=32);
     }
   }
 

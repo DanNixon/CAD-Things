@@ -1,5 +1,7 @@
 module Display(panel=false)
 {
+  $fn = 32;
+
   display_height = 210;
 
   /* Display area */
