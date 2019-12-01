@@ -8,7 +8,7 @@ module Display(panel=false)
     square([363, display_height], center=true);
   }
 
-  hole_diameter = 3.5;
+  hole_diameter = 3.8;
 
   /* Top holes */
   translate([0, (display_height / 2) + 4])
