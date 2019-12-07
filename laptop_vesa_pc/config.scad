@@ -19,4 +19,4 @@ box_config = [
     [[xy_tab_width, xy_tabs], [xz_tab_width, xz_tabs]]
   ];
 
-motherboard_pos = [-50, 0, 0];
+motherboard_pos = [-40, 5, 0];
