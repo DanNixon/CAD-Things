@@ -1,13 +1,16 @@
 include <common.scad>
 use <blank.scad>
 
-module BlankWithMountingPlate(front_thickness=5, plate_thickness=5, plate_depth=50)
+module BlankWithMountingPlate(front_thickness=5, plate_thickness=5, plate_depth=120)
 {
-  Blank(front_thickness);
+  translate([-(segment_width / 2) + plate_thickness, 0, 0])
+  {
+    Blank(front_thickness);
+  }
 
   color("green")
   {
-    translate([(segment_width - plate_thickness) / 2, 0, 0])
+    translate([plate_thickness / 2, 0, 0])
     {
       rotate([-90, 0, 0])
       {
