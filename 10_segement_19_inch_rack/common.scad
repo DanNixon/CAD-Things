@@ -2,7 +2,7 @@ segment_width = 42;
 segment_height = 83.5;
 
 mounting_hole_centres = 75.5;
-mounting_hole_diameter = 3.5;
+mounting_hole_diameter = 4;
 
 module MountingHolesProjection()
 {
