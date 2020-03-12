@@ -4,19 +4,23 @@ segment_height = 83.5;
 mounting_hole_centres = 75.5;
 mounting_hole_diameter = 3.5;
 
+module MountingHolesProjection()
+{
+  for(y = [-mounting_hole_centres/2, mounting_hole_centres/2])
+  {
+    translate([0, y])
+    {
+      circle(d=mounting_hole_diameter);
+    }
+  }
+}
+
 module FrontProjection()
 {
   difference()
   {
     square([segment_width, segment_height], center=true);
-
-    for(y = [-mounting_hole_centres/2, mounting_hole_centres/2])
-    {
-      translate([0, y])
-      {
-        circle(d=mounting_hole_diameter);
-      }
-    }
+    MountingHolesProjection();
   }
 }
 

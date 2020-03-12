@@ -31,7 +31,7 @@ module RaspberyPi3B()
   {
     union()
     {
-      BlankWithMountingPlate(plate_depth=90, recess_depth=front_panel_recess);
+      BlankWithMountingPlate(plate_depth=90, recess_depth=front_panel_recess, support_thickness=4, panel_support_length=50);
 
       /* Board standoffs */
       color("cyan")
