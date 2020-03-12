@@ -23,7 +23,7 @@ module PlaceMountingHoles()
   }
 }
 
-module RaspberyPi3B()
+module Segment()
 {
   board_offset = 5;
 
@@ -82,4 +82,4 @@ module RaspberyPi3B()
   }
 }
 
-RaspberyPi3B();
+Segment();
