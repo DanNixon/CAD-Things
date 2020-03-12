@@ -1,11 +1,11 @@
 include <common.scad>
 use <blank.scad>
 
-module BlankWithMountingPlate(front_thickness=5, plate_thickness=5, plate_depth=120)
+module BlankWithMountingPlate(front_thickness=5, plate_thickness=5, plate_depth=120, recess_size=[segment_width - 10, segment_height - 16], recess_depth=3)
 {
   translate([-(segment_width / 2) + plate_thickness, 0, 0])
   {
-    Blank(front_thickness);
+    Blank(front_thickness, recess_size, recess_depth);
   }
 
   color("green")

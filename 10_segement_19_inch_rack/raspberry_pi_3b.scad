@@ -1,10 +1,11 @@
 use <blank_with_mounting_plate.scad>
 
 board_size = [56, 85];
+front_panel_recess = 3;
 
 module PlaceMountingHoles()
 {
-  translate([-board_size[0]/2, 0])
+  translate([-board_size[0]/2, -front_panel_recess])
   {
     translate([3.5, board_size[1] - 3.5])
     {
@@ -30,10 +31,10 @@ module RaspberyPi3B()
   {
     union()
     {
-      BlankWithMountingPlate(plate_depth=90);
+      BlankWithMountingPlate(plate_depth=90, recess_depth=front_panel_recess);
 
       /* Board standoffs */
-      color("blue")
+      color("cyan")
       {
         rotate([0, -90, 0])
         {
