@@ -26,9 +26,12 @@ module Segment()
     {
       BlankWithMountingPlate(
           plate_depth=85,
+          front_thickness=2.9,
           recess_depth=0,
-          support_thickness=0,
-          rear_support_thickness=5);
+          support_thickness=4,
+          front_support_length=2.5,
+          panel_support_length=15,
+          rear_support_thickness=4);
 
       /* Board standoffs */
       color("cyan")
@@ -37,7 +40,7 @@ module Segment()
         {
           PlaceMountingHoles()
           {
-            Standoff(9.5, 4, board_offset);
+            Standoff(9.5, 4.5, board_offset);
           }
         }
       }
@@ -48,7 +51,7 @@ module Segment()
     {
       PlaceMountingHoles()
       {
-        cylinder(d=2.5, h=20, center=true);
+        cylinder(d=3, h=20, center=true);
       }
     }
 
@@ -60,13 +63,13 @@ module Segment()
         translate([-board_size[0] / 2, 0, 0])
         {
           /* Ethernet */
-          translate([(47 / 2) + 5, 0, 13.5 / 2])
+          translate([(47 / 2) + 5, 0, (13.5 / 2) + 1])
           {
             cube([47, 20, 13.5], center=true);
           }
 
           /* USB */
-          translate([(7 / 2) + 55, 0, 14 / 2])
+          translate([(7 / 2) + 55, 0, (14 / 2) + 1])
           {
             cube([7, 20, 14], center=true);
           }
