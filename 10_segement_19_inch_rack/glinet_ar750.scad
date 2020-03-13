@@ -1,35 +1,34 @@
+include <common.scad>
 use <blank_with_mounting_plate.scad>
 
-board_size = [56, 85];
-front_panel_recess = 3;
+board_size = [80, 60];
 
 module PlaceMountingHoles()
 {
-  /* TODO */
-  centres = 65;
+  centres = 74;
 
-  translate([0, -front_panel_recess])
+  for(x = [centres / 2, -centres / 2])
   {
-    for(x = [centres / 2, -centres / 2])
+    translate([x, 11])
     {
-      /* TODO */
-      translate([x, 10])
-      {
-        children();
-      }
+      children();
     }
   }
 }
 
 module Segment()
 {
-  board_offset = 5;
+  board_offset = 3;
 
   difference()
   {
     union()
     {
-      BlankWithMountingPlate(plate_depth=70, recess_depth=front_panel_recess, support_thickness=4, panel_support_length=50);
+      BlankWithMountingPlate(
+          plate_depth=85,
+          recess_depth=0,
+          support_thickness=0,
+          rear_support_thickness=5);
 
       /* Board standoffs */
       color("cyan")
@@ -38,7 +37,7 @@ module Segment()
         {
           PlaceMountingHoles()
           {
-            Standoff(12, 4, board_offset);
+            Standoff(9.5, 4, board_offset);
           }
         }
       }
@@ -49,7 +48,7 @@ module Segment()
     {
       PlaceMountingHoles()
       {
-        cylinder(d=2.5, h=50, center=true);
+        cylinder(d=2.5, h=20, center=true);
       }
     }
 
@@ -58,25 +57,24 @@ module Segment()
     {
       rotate([0, -90, 0])
       {
-        /* TODO */
         translate([-board_size[0] / 2, 0, 0])
         {
           /* Ethernet */
-          translate([40, 0, 13.5 / 2])
+          translate([(47 / 2) + 5, 0, 13.5 / 2])
           {
-            cube([30, 20, 13.5], center=true);
+            cube([47, 20, 13.5], center=true);
           }
 
           /* USB */
-          translate([15, 0, 16 / 2])
+          translate([(7 / 2) + 55, 0, 14 / 2])
           {
-            cube([8, 20, 16], center=true);
+            cube([7, 20, 14], center=true);
           }
 
           /* Micro USB */
-          translate([0, 0, 5 / 2])
+          translate([(9 / 2) + 66, 0, 5 / 2])
           {
-            cube([8, 20, 5], center=true);
+            cube([9, 20, 5], center=true);
           }
         }
       }
