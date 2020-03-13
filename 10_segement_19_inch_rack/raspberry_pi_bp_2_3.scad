@@ -51,7 +51,7 @@ module Segment()
     {
       PlaceMountingHoles()
       {
-        cylinder(d=2.5, h=50, center=true);
+        cylinder(d=2, h=50, center=true);
       }
     }
 
@@ -63,17 +63,17 @@ module Segment()
         translate([-board_size[0] / 2, 0, 0])
         {
           /* Ethernet */
-          translate([10.25, 0, 13.5 / 2])
+          translate([10.25, 0, (15 / 2) + 2])
           {
-            cube([17, 20, 13.5], center=true);
+            cube([17, 20, 15], center=true);
           }
 
           /* USB */
           for(x = [29, 47])
           {
-            translate([x, 0, 16 / 2])
+            translate([x, 0, (16 / 2) + 2])
             {
-              cube([15, 20, 16], center=true);
+              cube([16.5, 20, 16], center=true);
             }
           }
         }
