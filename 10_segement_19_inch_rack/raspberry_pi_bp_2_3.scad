@@ -63,7 +63,7 @@ module Segment()
         translate([-board_size[0] / 2, 0, 0])
         {
           /* Ethernet */
-          translate([10.25, 0, (15 / 2) + 2])
+          translate([10.25, 0, (15 / 2) + 1.5])
           {
             cube([17, 20, 15], center=true);
           }
