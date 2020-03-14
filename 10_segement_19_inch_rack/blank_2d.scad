@@ -2,7 +2,7 @@ include <common.scad>
 
 module Blank()
 {
-  FrontProjection();
+  FrontProjection(mounting_clearence_holes=true);
 }
 
 Blank();

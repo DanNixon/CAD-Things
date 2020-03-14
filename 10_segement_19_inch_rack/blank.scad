@@ -10,7 +10,7 @@ module Blank(front_thickness=5, recess_size=[segment_width - 10, segment_height 
       {
         linear_extrude(front_thickness)
         {
-          FrontProjection();
+          FrontProjection(mounting_clearence_holes=false);
         }
 
         translate([0, 0, -0.01])
