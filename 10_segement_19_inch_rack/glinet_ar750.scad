@@ -63,19 +63,19 @@ module Segment()
         translate([-board_size[0] / 2, 0, 0])
         {
           /* Ethernet */
-          translate([(47 / 2) + 5, 0, (13.5 / 2) + 1])
+          translate([(47 / 2) + 5, 0, (13.5 / 2) + 1.5])
           {
             cube([47, 20, 13.5], center=true);
           }
 
           /* USB */
-          translate([(7 / 2) + 55, 0, (14 / 2) + 1])
+          translate([(7 / 2) + 54.5, 0, (14 / 2) + 1.5])
           {
             cube([7, 20, 14], center=true);
           }
 
           /* Micro USB */
-          translate([(9 / 2) + 66, 0, 5 / 2])
+          translate([(9 / 2) + 65.5, 0, 5 / 2])
           {
             cube([9, 20, 5], center=true);
           }
