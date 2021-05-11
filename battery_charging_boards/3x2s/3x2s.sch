@@ -1,0 +1,195 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 609ABA33
+P 4700 2100
+F 0 "J3" H 4780 2142 50  0000 L CNN
+F 1 "Battery 1" H 4780 2051 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 4700 2100 50  0001 C CNN
+F 3 "~" H 4700 2100 50  0001 C CNN
+	1    4700 2100
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J4
+U 1 1 609AC235
+P 4700 2600
+F 0 "J4" H 4780 2642 50  0000 L CNN
+F 1 "Battery 2" H 4780 2551 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 4700 2600 50  0001 C CNN
+F 3 "~" H 4700 2600 50  0001 C CNN
+	1    4700 2600
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J5
+U 1 1 609AC913
+P 4700 3100
+F 0 "J5" H 4780 3142 50  0000 L CNN
+F 1 "Battery 3" H 4780 3051 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 4700 3100 50  0001 C CNN
+F 3 "~" H 4700 3100 50  0001 C CNN
+	1    4700 3100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4500 2200 4500 2500
+Wire Wire Line
+	4500 2700 4500 3000
+Wire Wire Line
+	4500 2200 3000 2200
+Wire Wire Line
+	3000 2300 4400 2300
+Wire Wire Line
+	4400 2300 4400 2600
+Wire Wire Line
+	4400 2600 4500 2600
+Wire Wire Line
+	4500 2700 4300 2700
+Wire Wire Line
+	4300 2700 4300 2400
+Wire Wire Line
+	4500 3100 4200 3100
+Wire Wire Line
+	4200 3100 4200 2500
+Wire Wire Line
+	4200 2500 3000 2500
+Wire Wire Line
+	4500 3200 4100 3200
+Wire Wire Line
+	4100 3200 4100 2600
+Wire Wire Line
+	3000 2000 3100 2000
+Connection ~ 3100 2000
+Wire Wire Line
+	3100 2000 3750 2000
+$Comp
+L power:GND #PWR0101
+U 1 1 609BDC6C
+P 3750 2000
+F 0 "#PWR0101" H 3750 1750 50  0001 C CNN
+F 1 "GND" H 3755 1827 50  0000 C CNN
+F 2 "" H 3750 2000 50  0001 C CNN
+F 3 "" H 3750 2000 50  0001 C CNN
+	1    3750 2000
+	-1   0    0    1   
+$EndComp
+Connection ~ 3750 2000
+Wire Wire Line
+	3750 2000 4500 2000
+Wire Wire Line
+	3000 2100 4500 2100
+$Comp
+L Connector_Generic:Conn_01x07 J1
+U 1 1 609AE9CC
+P 2800 2300
+F 0 "J1" H 2718 2817 50  0000 C CNN
+F 1 "Balance" H 2718 2726 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical" H 2800 2300 50  0001 C CNN
+F 3 "~" H 2800 2300 50  0001 C CNN
+	1    2800 2300
+	-1   0    0    1   
+$EndComp
+Connection ~ 4500 2700
+Connection ~ 4500 2200
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 609B10AD
+P 2800 3400
+F 0 "J2" H 2718 3617 50  0000 C CNN
+F 1 "Charger" H 2718 3526 50  0000 C CNN
+F 2 "Connector_AMASS:AMASS_XT60-F_1x02_P7.20mm_Vertical" H 2800 3400 50  0001 C CNN
+F 3 "~" H 2800 3400 50  0001 C CNN
+	1    2800 3400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3400 3100 3400
+Wire Wire Line
+	3100 2000 3100 3400
+$Comp
+L SparkFun-Aesthetics:OSHW-LOGOS LOGO1
+U 1 1 609DDF66
+P 1600 6900
+F 0 "LOGO1" H 1600 7150 45  0001 C CNN
+F 1 "OSHW-LOGOS" H 1600 6500 45  0001 C CNN
+F 2 "" H 1600 7200 20  0001 C CNN
+F 3 "" H 1600 6900 50  0001 C CNN
+F 4 "XXX-00000" H 2078 6835 60  0000 L CNN "Field4"
+	1    1600 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DPDT_x2 SW1
+U 1 1 609DCFD8
+P 3450 3500
+F 0 "SW1" H 3450 3785 50  0000 C CNN
+F 1 "Battery Count" H 3450 3694 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_CuK_JS202011CQN_DPDT_Straight" H 3450 3500 50  0001 C CNN
+F 3 "~" H 3450 3500 50  0001 C CNN
+	1    3450 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DPDT_x2 SW1
+U 2 1 609DD2CF
+P 3450 4000
+F 0 "SW1" H 3450 4285 50  0000 C CNN
+F 1 "Battery Count" H 3450 4194 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_CuK_JS202011CQN_DPDT_Straight" H 3450 4000 50  0001 C CNN
+F 3 "~" H 3450 4000 50  0001 C CNN
+	2    3450 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3400 3750 3400
+Wire Wire Line
+	3650 3900 3750 3900
+Wire Wire Line
+	3750 3900 3750 3400
+Wire Wire Line
+	3000 3500 3150 3500
+Wire Wire Line
+	3250 4000 3150 4000
+Wire Wire Line
+	3150 4000 3150 3500
+Connection ~ 3150 3500
+Wire Wire Line
+	3150 3500 3250 3500
+Wire Wire Line
+	3650 3600 3850 3600
+Wire Wire Line
+	3850 3600 3850 4100
+Wire Wire Line
+	3850 4100 3650 4100
+Wire Wire Line
+	3000 2400 3750 2400
+Wire Wire Line
+	3000 2600 3850 2600
+Wire Wire Line
+	3750 3400 3750 2400
+Connection ~ 3750 3400
+Connection ~ 3750 2400
+Wire Wire Line
+	3750 2400 4300 2400
+Wire Wire Line
+	3850 3600 3850 2600
+Connection ~ 3850 3600
+Connection ~ 3850 2600
+Wire Wire Line
+	3850 2600 4100 2600
+$EndSCHEMATC
