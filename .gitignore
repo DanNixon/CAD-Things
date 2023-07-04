@@ -33,10 +33,6 @@ fp-info-cache
 
 __pycache__/
 
-# Generated CAD files
-*.dxf
-*.scad
-
 *.gbr
 *.drl
 
