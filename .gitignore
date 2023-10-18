@@ -78,6 +78,7 @@ eagle.epf
 
 # FreeCAD
 *.FCStd1
+*.FCBak
 
 
 # Production file archives
