@@ -2,4 +2,6 @@
   (version 7)
   (lib (name "Displays")(type "KiCad")(uri "/home/dan/git/KiCad_Lib/libraries/Displays/Displays.pretty")(options "")(descr ""))
   (lib (name "Modules")(type "KiCad")(uri "/home/dan/git/KiCad_Lib/libraries/Modules/Modules.pretty")(options "")(descr ""))
+  (lib (name "Input")(type "KiCad")(uri "/home/dan/git/KiCad_Lib/libraries/Input/Input.pretty")(options "")(descr ""))
+  (lib (name "Connectors")(type "KiCad")(uri "/home/dan/git/KiCad_Lib/libraries/Connectors/Connectors.pretty")(options "")(descr ""))
 )

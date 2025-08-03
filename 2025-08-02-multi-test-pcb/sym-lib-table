@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "Displays")(type "KiCad")(uri "/home/dan/git/KiCad_Lib/libraries/Displays/Displays.kicad_sym")(options "")(descr ""))
   (lib (name "Modules")(type "KiCad")(uri "/home/dan/git/KiCad_Lib/libraries/Modules/Modules.kicad_sym")(options "")(descr ""))
+  (lib (name "Input")(type "KiCad")(uri "/home/dan/git/KiCad_Lib/libraries/Input/Input.kicad_sym")(options "")(descr ""))
 )
