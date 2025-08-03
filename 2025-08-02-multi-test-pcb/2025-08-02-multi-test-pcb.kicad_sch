@@ -4568,6 +4568,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 48.26) (xy 173.99 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0eb82aaf-4e70-461f-8b89-695712c683f4")
+	)
+	(wire
+		(pts
 			(xy 109.22 91.44) (xy 111.76 91.44)
 		)
 		(stroke
@@ -4608,6 +4618,16 @@
 	)
 	(wire
 		(pts
+			(xy 180.34 60.96) (xy 194.31 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3148f065-974f-4993-a316-bf4ed04d44b6")
+	)
+	(wire
+		(pts
 			(xy 209.55 134.62) (xy 222.25 134.62)
 		)
 		(stroke
@@ -4615,6 +4635,16 @@
 			(type default)
 		)
 		(uuid "32a86853-8e3e-40e1-8495-01ccf321f2a4")
+	)
+	(wire
+		(pts
+			(xy 180.34 53.34) (xy 180.34 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3888ffdb-4243-4cc0-bd22-95b30737bf35")
 	)
 	(wire
 		(pts
@@ -4688,6 +4718,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 48.26) (xy 233.68 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5814823d-96d5-4cc5-9ee4-738735a2e496")
+	)
+	(wire
+		(pts
 			(xy 209.55 124.46) (xy 222.25 124.46)
 		)
 		(stroke
@@ -4728,6 +4768,16 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 48.26) (xy 173.99 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "731dd593-11a3-4dff-a1a2-317593fe77d6")
+	)
+	(wire
+		(pts
 			(xy 152.4 86.36) (xy 154.94 86.36)
 		)
 		(stroke
@@ -4765,6 +4815,16 @@
 			(type default)
 		)
 		(uuid "83957274-776e-42aa-a21c-700a1c66942e")
+	)
+	(wire
+		(pts
+			(xy 173.99 62.23) (xy 191.77 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8546523f-b8bd-4572-a895-dda4a6248047")
 	)
 	(wire
 		(pts
@@ -4838,6 +4898,36 @@
 	)
 	(wire
 		(pts
+			(xy 243.84 62.23) (xy 224.79 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9e5a4dc-2748-4138-a574-b0ae377cf192")
+	)
+	(wire
+		(pts
+			(xy 224.79 62.23) (xy 224.79 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac0f7061-9bbc-4387-8eba-b8000665bae4")
+	)
+	(wire
+		(pts
+			(xy 182.88 53.34) (xy 180.34 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acc2ae2d-c2e4-4fc5-9269-9c8cc7686ceb")
+	)
+	(wire
+		(pts
 			(xy 184.15 132.08) (xy 196.85 132.08)
 		)
 		(stroke
@@ -4878,6 +4968,16 @@
 	)
 	(wire
 		(pts
+			(xy 246.38 60.96) (xy 246.38 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be2b44c1-4bd5-47fd-b541-75d65c8137cd")
+	)
+	(wire
+		(pts
 			(xy 71.12 128.27) (xy 73.66 128.27)
 		)
 		(stroke
@@ -4895,6 +4995,16 @@
 			(type default)
 		)
 		(uuid "cc0c89e3-57b0-4349-96e7-9a2fa4d91e68")
+	)
+	(wire
+		(pts
+			(xy 233.68 53.34) (xy 231.14 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d426c57d-4c6e-44cb-a787-2f50890a7e69")
 	)
 	(wire
 		(pts
@@ -4918,6 +5028,16 @@
 	)
 	(wire
 		(pts
+			(xy 194.31 60.96) (xy 194.31 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8ec105a-4205-40a5-b97d-6c80fad49313")
+	)
+	(wire
+		(pts
 			(xy 209.55 142.24) (xy 233.68 142.24)
 		)
 		(stroke
@@ -4925,6 +5045,16 @@
 			(type default)
 		)
 		(uuid "dce30349-c830-46e4-8868-ac0a1327c8c4")
+	)
+	(wire
+		(pts
+			(xy 243.84 63.5) (xy 243.84 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd338ac0-ad3b-4d2e-b051-0dfa35ed089e")
 	)
 	(wire
 		(pts
@@ -4968,6 +5098,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 60.96) (xy 246.38 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eaaa1c9a-7335-4112-bbdf-b220c0799f93")
+	)
+	(wire
+		(pts
 			(xy 184.15 134.62) (xy 196.85 134.62)
 		)
 		(stroke
@@ -4975,6 +5115,26 @@
 			(type default)
 		)
 		(uuid "eae9a2a0-c47d-4a1a-875b-12ef21731eb3")
+	)
+	(wire
+		(pts
+			(xy 191.77 62.23) (xy 191.77 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa69bc7c-7681-4a49-8830-2a61760ec186")
+	)
+	(wire
+		(pts
+			(xy 231.14 53.34) (xy 231.14 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdf1f18b-8b7f-416a-aa54-3d6f3fcb1430")
 	)
 	(label "IO_20"
 		(at 222.25 132.08 0)
@@ -8054,7 +8214,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 148.59 86.36 0)
 			(effects
 				(font
